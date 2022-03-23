@@ -29,7 +29,7 @@ class AvatarPage extends StatelessWidget {
           image: NetworkImage(
               'https://upload.wikimedia.org/wikipedia/tr/thumb/1/19/Edward_Elric.png/360px-Edward_Elric.png'),
           placeholder: AssetImage('assets/one-punch-man.gif'),
-          fadeInDuration: Duration(milliseconds: 200),
+          fadeInDuration: Duration(milliseconds: 300),
         ),
       ),
     );

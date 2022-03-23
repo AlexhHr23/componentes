@@ -18,7 +18,7 @@ class HomePageTemp extends StatelessWidget {
   //List<Widget> _crearItems() {
   //  List<Widget> lista = <Widget>[];
   //  for (String opt in opciones) {
-  //    final tempWidget = ListTile(
+  //    final tempWidget = ListTile(R
   //      title: Text(opt),
   //    );
   //    //Usando el operador cascada

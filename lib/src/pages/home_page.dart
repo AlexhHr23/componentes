@@ -19,11 +19,11 @@ class HomePage extends StatelessWidget {
     return FutureBuilder(
       future: menuProvider.cargarData(),
       initialData: [],
-      builder: (BuildContext contex, AsyncSnapshot<List<dynamic>> snapShot) {
+      builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapShot) {
         print('builder: ');
         print(snapShot.data);
         return ListView(
-          children: _listaItems(snapShot.data),
+          children: _listaItems(snapShot.data ?? [], context),
         );
       },
     );
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
         leading: getIcon(opt['icon']),
         trailing: Icon(Icons.keyboard_arrow_right, color: Colors.blue),
         onTap: () {
-          Navigator.pushNamed(context, opt['rutas']);
+          Navigator.pushNamed(context, opt['ruta']);
         },
       );
       opciones
