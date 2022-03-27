@@ -12,7 +12,7 @@ class _InputPageState extends State<InputPage> {
   String _password = '';
   String _fecha = '';
   List<String> _lenguajes = [
-    'Jsava',
+    'Java',
     'phyton',
     'javaScript',
     'c++',
@@ -73,7 +73,7 @@ class _InputPageState extends State<InputPage> {
     return ListTile(
       title: Text('El nombre es: $_nombre'),
       subtitle: Text('Email: $_email, Password: $_password'),
-      trailing: Text(_opcionSeleccionada),
+      trailing: Text('Lenguaje: $_opcionSeleccionada'),
     );
   }
 
@@ -150,14 +150,25 @@ class _InputPageState extends State<InputPage> {
   }
 
   Widget _crearDropDown() {
-    return DropdownButton(
-        value: _opcionSeleccionada,
-        items: getOpcionesDropDown(),
-        onChanged: (opt) {
-          setState(() {
-            _opcionSeleccionada = opt;
-          });
-        });
+    return Row(
+      children: <Widget>[
+        Icon(Icons.code),
+        SizedBox(
+          width: 30,
+        ),
+        Text('Lenguajes de programación: '),
+        Expanded(
+          child: DropdownButton(
+              value: _opcionSeleccionada,
+              items: getOpcionesDropDown(),
+              onChanged: (opt) {
+                setState(() {
+                  _opcionSeleccionada = opt.toString();
+                });
+              }),
+        ),
+      ],
+    );
   }
 
   List<DropdownMenuItem<String>> getOpcionesDropDown() {

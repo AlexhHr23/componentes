@@ -10,15 +10,13 @@ class AvatarPage extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(5.0),
             child: CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://upload.wikimedia.org/wikipedia/tr/thumb/1/19/Edward_Elric.png/360px-Edward_Elric.png'),
               radius: 25.0,
             ),
           ),
           Container(
             margin: EdgeInsets.only(right: 10.0),
             child: CircleAvatar(
-              child: Text('GN'),
+              child: Text('JR'),
               backgroundColor: Colors.purple,
             ),
           )
